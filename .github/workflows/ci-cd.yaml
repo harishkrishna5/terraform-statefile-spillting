@@ -31,12 +31,17 @@ jobs:
 
     - name: Terraform Init
       run: terraform init
+      working-directory: infra/compute
 
     - name: Terraform Plan
       run: terraform plan -out=tfplan
+      working-directory: infra/compute
+
 
     - name: Terraform Apply
       run: terraform apply -auto-approve tfplan
+      working-directory: infra/compute
+
   #  - name: Run Destroy Script
  #     run: bash destroy.sh
 
