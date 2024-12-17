@@ -27,7 +27,7 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         
     - name: Change directory to the folder containing terraform files
-      run: cd infra/compute
+      run: cd terraform-statefile-spillting/infra/compute/
 
     - name: Terraform Init
       run: terraform init
